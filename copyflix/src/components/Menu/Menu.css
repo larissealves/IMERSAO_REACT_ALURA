@@ -24,7 +24,7 @@
     padding-right: 5%;
   
     background: black;
-    border-bottom: 2px solid primary;
+    border-bottom: 6px solid #E4C063;
   }
   body {
     --bodyPaddingTop: 94px;
@@ -72,4 +72,11 @@
       border: 0;
       text-align: center;
     }
+  }
+
+  #root {
+    min-height: calc(100vh - var(--bodyPaddingTop));
+    display: flex;
+    flex-direction: column;
+
   }

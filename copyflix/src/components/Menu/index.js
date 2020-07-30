@@ -1,17 +1,18 @@
 import React from 'react';
-import Logo from '../../assets/Logo.png'
-import './Menu.css'
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/Logo.png';
+import './Menu.css';
 
 import ButtonLink from '../ButtonLink/buttonLink'; 
 
 function MenuCopyFlix() {
     return (
         <nav className="Menu">
-            <a href="/">
+            <Link to="/">
                 <img className = "Logo" src = {Logo} alt= "CopyFlix" />
-            </a>
-            <ButtonLink className="ButtonLink" href="/">
-               Novo Link
+            </Link>
+            <ButtonLink className="ButtonLink" to="/cadastro/video">
+               Novo Vídeo
             </ButtonLink>
 
         </nav>
