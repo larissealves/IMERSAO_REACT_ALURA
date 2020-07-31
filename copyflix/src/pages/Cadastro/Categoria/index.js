@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import TemplateBase from '../../../components/TemplateBase/index'
 import FormField from '../../../components/FormField';
@@ -68,7 +67,7 @@ function CadastroCategoria() {
             <FormField 
                 label = "Descrição: "
                 name = "descricao"
-                type = "text"
+                type = "textarea"
                 value = { values.descricao }
                 onChange = {handleChange}
             />
@@ -97,10 +96,6 @@ function CadastroCategoria() {
                     )
                 })}
             </ul>
-
-            <Link to="/">
-                <h2>aaaaaaaa</h2>
-            </Link>
         </TemplateBase>
     )
 }
