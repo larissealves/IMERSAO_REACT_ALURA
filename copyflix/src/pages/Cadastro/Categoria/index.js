@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import TemplateBase from '../../../components/TemplateBase/index'
+import FormField from '../../../components/FormField';
 
 
 function CadastroCategoria() {
@@ -29,6 +30,16 @@ function CadastroCategoria() {
         );
      }
 
+     /*
+     Outra opc de como usar de maneira mais generica a função acima:
+     function handleChange(infoDoEvento) {
+         const  { getAttribute, value } = infoDoEvento.target;
+        setValue(
+            getAttribute('name'),
+            value
+        );
+     }
+     */
 
     return (
 
@@ -46,49 +57,33 @@ function CadastroCategoria() {
 
             }}>
 
+            <FormField 
+                label = "Nome Categoria: "
+                name = "nome"
+                type = "text"
+                value = { values.nome }
+                onChange = {handleChange}
+            />
+
+            <FormField 
+                label = "Descrição: "
+                name = "descricao"
+                type = "text"
+                value = { values.descricao }
+                onChange = {handleChange}
+            />
+
+            <FormField 
+                label = "Cor: "
+                type = "color"
+                name = "cor"
+                value = { values.cor }
+                onChange = {handleChange}
+            />
             
-            <div>
-                <label>
-                    Nome da Categoria:
-                    <input
-                        type = "text"
-                        value = {values.nome}
-                        name="nome"
-                        onChange = {handleChange}
-                    />
-                </label>
-
-
-            <div>
-                <label>
-                    Descrição:
-                    <input
-                        type = "text"
-                        value = {values.descricao}
-                        name="descricao"
-                        onChange = {handleChange}
-                    />
-                </label>
-            </div>
-
-
-                <label>
-                    Cor:
-                    <input
-                        type = "color"
-                        value = {values.cor}
-                        name="cor"
-                        onChange = {handleChange}
-                    />
-                </label>
-
-
-            </div>
-
-    
-                <button>
-                    Cadastrar!
-                </button>
+            <button>
+                Cadastrar!
+            </button>
             
 
             </form>
