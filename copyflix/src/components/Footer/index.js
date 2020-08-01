@@ -14,8 +14,9 @@ function Footer() {
         {' '}
         <a href="https://www.alura.com.br/">
           Imersão React da Alura
-        </a>
+        </a> <br/>
       </p>
+      <a href="https://github.com/larissealves/"target="_blank"> GitHub </a>
     </FooterBase>
   );
 }
