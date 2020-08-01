@@ -1,0 +1,32 @@
+button {
+        color:black;
+        border: 1px solid rgba(131, 121, 121, 0.719);
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 16px 24px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        outline: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: opacity .3s;
+      }
+      .button:hover,
+      .button:focus {
+        opacity: .6;
+      }
+      
+      @media (max-width: 800px) {
+        a.button{
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #E4C063;
+          border-radius: 0;
+          border: 0;
+          text-align: center;
+        }
+}
